@@ -26,7 +26,7 @@ public class Player extends Creature {
 	
 	//talk
 	private int lastDir; //1 = up, 2 = down, 3 = left, 4 = right
-	private boolean talk, tryToTalk;
+	private boolean talk, tryToTalk, isMoving;
 	private String message;
 	private NPC lastNPC;
 	
@@ -168,6 +168,7 @@ public class Player extends Creature {
 	private void getInput(){
 		xMove = 0;
 		yMove = 0;
+		isMoving = false;
 		
 		if(inventory.isActive() || menu.isActive() || menu.isSubmenuActive())
 			return;
@@ -175,18 +176,22 @@ public class Player extends Creature {
 		if(!talk){
 			if(handler.getKeyManager().up){
 				yMove = -speed;
+				isMoving = true;
 				lastDir = 1;
 			}
 			if(handler.getKeyManager().down){
 				yMove = speed;
+				isMoving = true;
 				lastDir = 2;
 			}
 			if(handler.getKeyManager().left){
 				xMove = -speed;
+				isMoving = true;
 				lastDir = 3;
 			}
 			if(handler.getKeyManager().right){
 				xMove = speed;
+				isMoving = true;
 				lastDir = 4;
 			}
 		}
@@ -215,7 +220,7 @@ public class Player extends Creature {
 	}
 	
 	private BufferedImage getCurrentAnimationFrame(){
-		if(!talk && !inventory.isActive() && !menu.isActive() && !menu.isSubmenuActive()){
+		if(!talk && !inventory.isActive() && !menu.isActive() && !menu.isSubmenuActive() && isMoving){
 			if(lastDir == 1){
 				return animUp.getCurrentFrame();
 			}else if(lastDir == 2){
