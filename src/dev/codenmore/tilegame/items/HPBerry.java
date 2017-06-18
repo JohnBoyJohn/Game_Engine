@@ -6,7 +6,7 @@ import dev.codenmore.tilegame.monsters.Monster;
 
 public class HPBerry extends Item{
 	
-	private int healPoints = 3;
+	private int hpPoints = 3;
 
 	public HPBerry(BufferedImage texture, String name, int id) {
 		super(texture, name, id);
@@ -14,13 +14,13 @@ public class HPBerry extends Item{
 	
 	@Override
 	public void use(Monster m){
-		m.setHp_max(m.getHp_max() + healPoints);
-		m.setHp(m.getHp() + healPoints);
+		m.setHp_max(m.getHp_max() + hpPoints);
+		m.setHp(m.getHp() + hpPoints);
 	}
 	
 	@Override
 	public String getItemEffectMessage(Monster m){
-		String res = String.valueOf("Die HP des Monsters " + m.getName() + " wurden um " + healPoints + " gesteigert.");
+		String res = String.valueOf("Die HP des Monsters " + m.getName() + " wurden um " + hpPoints + " gesteigert.");
 		return res;
 	}
 

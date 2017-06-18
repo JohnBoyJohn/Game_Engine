@@ -38,8 +38,8 @@ public class MenuState extends State {
 		uiManager.tick();
 		
 		//set Menu instantly to the GameState, menustate is skipped
-		handler.getMouseManager().setUIManager(null);
-		State.setState(handler.getGame().gameState);
+		//handler.getMouseManager().setUIManager(null);
+		//State.setState(handler.getGame().gameState);
 	}
 
 	@Override

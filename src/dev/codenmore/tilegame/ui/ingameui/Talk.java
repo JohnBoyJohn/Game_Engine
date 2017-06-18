@@ -13,6 +13,7 @@ public class Talk implements Settings{
 
 	private Handler handler;
 	private String message;
+	@SuppressWarnings("unused")
 	private NPC npc;
 	
 	public Talk(Handler handler){

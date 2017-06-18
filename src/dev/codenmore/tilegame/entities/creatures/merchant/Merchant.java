@@ -16,6 +16,7 @@ public class Merchant extends NPC{
 	private ArrayList<Item> items;
 	private BufferedImage image;
 	
+	@SuppressWarnings("unused")
 	private MerchantTradeQuestion merchantTradeQuestion;
 
 	public Merchant(Handler handler, int id, float x, float y, int width, int height, String message,

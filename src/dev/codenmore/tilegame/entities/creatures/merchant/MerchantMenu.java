@@ -1,9 +1,12 @@
 package dev.codenmore.tilegame.entities.creatures.merchant;
 
+import java.awt.Graphics;
+
 import dev.codenmore.tilegame.Handler;
 
 public class MerchantMenu {
 
+	@SuppressWarnings("unused")
 	private Handler handler;
 	private boolean active = false;
 	
@@ -17,7 +20,7 @@ public class MerchantMenu {
 		}
 	}
 	
-	public void render(){
+	public void render(Graphics g){
 		if(active){
 			
 		}

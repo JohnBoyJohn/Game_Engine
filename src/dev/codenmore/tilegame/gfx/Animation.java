@@ -1,5 +1,6 @@
 package dev.codenmore.tilegame.gfx;
 
+import java.awt.Graphics;
 import java.awt.image.BufferedImage;
 
 public class Animation {
@@ -31,5 +32,9 @@ public class Animation {
 	
 	public BufferedImage getCurrentFrame(){
 		return frames[index];
+	}
+	
+	public void render(Graphics g){
+		
 	}
 }

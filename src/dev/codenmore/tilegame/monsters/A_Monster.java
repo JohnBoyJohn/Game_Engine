@@ -26,6 +26,7 @@ public abstract class A_Monster implements Monster_Settings{
 	//images
 	private SpriteSheet sheet;
 	private BufferedImage image;
+	@SuppressWarnings("unused")
 	private Animation attack, die;
 	
 	public A_Monster(Handler handler, int race, int racenumber, SpriteSheet sheet){

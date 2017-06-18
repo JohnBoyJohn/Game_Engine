@@ -111,19 +111,6 @@ public class EntityManager implements Settings{
 	public void setEntities(ArrayList<Entity> entities) {
 		this.entities = entities;
 	}
-	
-	public boolean swapWorld(){
-		return swapWorld;
-	}
-
-	public WarpTile getWt() {
-		return wt;
-	}
-
-	public void setWt(WarpTile wt) {
-		this.wt = wt;
-		addEntity(this.wt);
-	}
 
 	public ArrayList<NPC> getNPCs() {
 		return npcs;
@@ -139,5 +126,18 @@ public class EntityManager implements Settings{
 
 	public void setMerchants(ArrayList<Merchant> merchants) {
 		this.merchants = merchants;
+	}
+	
+	public boolean swapWorld(){
+		return swapWorld;
+	}
+
+	public WarpTile getWt() {
+		return wt;
+	}
+
+	public void setWt(WarpTile wt) {
+		this.wt = wt;
+		addEntity(this.wt);
 	}
 }

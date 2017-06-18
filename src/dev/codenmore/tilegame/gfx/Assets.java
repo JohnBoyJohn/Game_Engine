@@ -19,12 +19,10 @@ public class Assets implements Settings{
 	public static BufferedImage  player, dirt, grass, wall, stone, tree;
 	public static BufferedImage[] player_down, player_up, player_left, player_right;
 	public static BufferedImage[] enemy_down, enemy_up, enemy_left, enemy_right;
-	public static BufferedImage[] boss_att_down, boss_att_up, boss_att_left, boss_att_right;
 	public static BufferedImage[] start_btn;
 	public static BufferedImage item_log, item_stone, item_herb, item_magic_tear, 
 			item_att_berry, item_def_berry, item_hp_berry, item_mp_berry;
 	public static BufferedImage inventoryScreen;
-	public static BufferedImage bullet;
 	public static BufferedImage warp_tile;
 	public static BufferedImage menu_arrow, menu_arrow_2, mainMenu_background, monsterMenu_background, monsterTaskMenu_background;
 	public static BufferedImage fightmenu_monsterHealthBar;
